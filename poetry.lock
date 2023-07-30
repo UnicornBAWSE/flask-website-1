@@ -1,4 +1,17 @@
 [[package]]
+name = "bidict"
+version = "0.22.1"
+description = "The bidirectional mapping library for Python."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+docs = ["sphinx", "sphinx-copybutton", "furo"]
+lint = ["pre-commit"]
+test = ["hypothesis", "pytest", "pytest-benchmark", "pytest-cov", "pytest-xdist", "sortedcollections", "sortedcontainers", "sphinx"]
+
+[[package]]
 name = "blinker"
 version = "1.6.2"
 description = "Fast, simple object-to-object and broadcast signaling"
@@ -45,6 +58,21 @@ async = ["asgiref (>=3.2)"]
 dotenv = ["python-dotenv"]
 
 [[package]]
+name = "flask-socketio"
+version = "5.3.5"
+description = "Socket.IO integration for Flask applications"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+Flask = ">=0.9"
+python-socketio = ">=5.0.2"
+
+[package.extras]
+docs = ["sphinx"]
+
+[[package]]
 name = "itsdangerous"
 version = "2.1.2"
 description = "Safely pass data to untrusted environments and back."
@@ -75,6 +103,35 @@ optional = false
 python-versions = ">=3.7"
 
 [[package]]
+name = "python-engineio"
+version = "4.5.1"
+description = "Engine.IO server and client for Python"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.extras]
+asyncio_client = ["aiohttp (>=3.4)"]
+client = ["requests (>=2.21.0)", "websocket-client (>=0.54.0)"]
+docs = ["sphinx"]
+
+[[package]]
+name = "python-socketio"
+version = "5.8.0"
+description = "Socket.IO server and client for Python"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+bidict = ">=0.21.0"
+python-engineio = ">=4.3.0"
+
+[package.extras]
+asyncio_client = ["aiohttp (>=3.4)"]
+client = ["requests (>=2.21.0)", "websocket-client (>=0.54.0)"]
+
+[[package]]
 name = "werkzeug"
 version = "2.3.6"
 description = "The comprehensive WSGI web application library."
@@ -91,14 +148,18 @@ watchdog = ["watchdog (>=2.3)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "d7a65ba75d9fd1d70398a76955d93d28129b8c09a3b56e10fef71ce427090c8b"
+content-hash = "cd34f95d128b37613c2f7991a21e41ed34d69a9c92d36f57ed0cf71bb591dff2"
 
 [metadata.files]
+bidict = []
 blinker = []
 click = []
 colorama = []
 flask = []
+flask-socketio = []
 itsdangerous = []
 jinja2 = []
 markupsafe = []
+python-engineio = []
+python-socketio = []
 werkzeug = []

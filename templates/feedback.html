@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Form - Page 4</title>
+    <!-- ... Same as before ... -->
+</head>
+<body>
+    <h1>Feedback Form</h1>
+    <h2>Please rate your work session:</h2>
+    <form action="{{ url_for('feedback_form', mood=mood) }}" method="post">
+        <label>
+            How focused were you during the work session? (1 to 5):
+            <input type="number" name="focus_rating" min="1" max="5" required>
+        </label><br>
+        <label>
+            How good did you feel about your productivity? (1 to 5):
+            <input type="number" name="feel_rating" min="1" max="5" required>
+        </label><br>
+        <label>
+            How realistically did you timeblock your tasks? (1 to 5):
+            <input type="number" name="timeblock_rating" min="1" max="5" required>
+        </label><br>
+        <input type="submit" value="Submit Feedback">
+    </form>
+</body>
+</html>

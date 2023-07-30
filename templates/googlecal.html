@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google Calendar - Page 2</title>
+    <!-- ... Same as before ... -->
+</head>
+<body>
+    <h1>Google Calendar</h1>
+    <h2>Current Day: {{ mood }}</h2>
+    <div id="calendar">
+        <div class="time-block">
+            <div class="hour">8 AM</div>
+            <div class="event" id="event-1">Time-block this!</div>
+        </div>
+        <!-- Add more time blocks for the day as needed -->
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('.event').draggable({ revert: 'invalid', cursor: 'move' });
+            $('.time-block').droppable({
+                accept: '.event',
+                drop: function(event, ui) {
+                    ui.draggable.appendTo($(this));
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to the Website</title>
+</head>
+<body>
+    <h1>Welcome to the Website!</h1>
+    <p>How do you feel right now?</p>
+    <form action="{{ url_for('select_mood') }}" method="post">
+        <label><input type="radio" name="mood" value="bad"> Bad</label><br>
+        <label><input type="radio" name="mood" value="okay"> Okay</label><br>
+        <label><input type="radio" name="mood" value="great"> Great</label><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

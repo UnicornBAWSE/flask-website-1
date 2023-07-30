@@ -1,0 +1,33 @@
+/* styles.css */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333; /* Choose your desired background color */
+  color: #fff; /* Choose your desired text color */
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px; /* Adjust this value as needed to separate the tabs */
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+nav ul li a:hover {
+  background-color: #555; /* Choose a hover background color */
+}

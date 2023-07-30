@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Custom Pomodoro Timer - Page 3</title>
+    <!-- ... Same as before ... -->
+</head>
+<body>
+    <h1>Custom Pomodoro Timer</h1>
+    <h2>Select Pomodoro Timer Duration:</h2>
+    <form action="{{ url_for('pomodoro_timer', mood=mood) }}" method="post">
+        <label>
+            Pomodoro Time (minutes):
+            <input type="number" name="pomodoro_time" min="1" required>
+        </label><br>
+        <label>
+            Short Break Time (minutes):
+            <input type="number" name="short_break_time" min="1" required>
+        </label><br>
+        <label>
+            Long Break Time (minutes):
+            <input type="number" name="long_break_time" min="1" required>
+        </label><br>
+        <input type="submit" value="Start Timer">
+    </form>
+</body>
+</html>
